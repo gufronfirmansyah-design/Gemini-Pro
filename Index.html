@@ -3,15 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pemesanan Google AI Pro - 18 Bulan Access</title>
-  <!-- Menghilangkan margin dan membuat layar penuh -->
+  <title>Google AI Pro - 18 Bulan Access</title>
+  
+  <!-- Meta tags untuk SEO dan tampilan sharing -->
+  <meta name="description" content="Pemesanan Google AI Pro 18 Bulan Access (Google One 5TB). Aktivasi resmi via link redeem, aman untuk email pribadi Anda.">
+  <meta name="theme-color" content="#1e293b">
+  
   <style>
-    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #f8fafc; }
-    iframe { width: 100%; height: 100%; border: none; display: block; }
+    /* Reset CSS dasar untuk memastikan tidak ada celah putih di pinggir layar */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Mencegah munculnya scrollbar ganda */
+      background-color: #f8fafc; /* Warna background menyesuaikan aplikasi */
+      font-family: sans-serif;
+    }
+    /* Membuat iframe memenuhi seluruh layar */
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
+    
+    /* Loading spinner sederhana sebelum iframe termuat */
+    .loading-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      z-index: -1; /* Berada di bawah iframe */
+    }
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #cbd5e1;
+      border-top-color: #3b82f6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    .loading-text {
+      color: #64748b;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    @keyframes spin { 
+      to { transform: rotate(360deg); } 
+    }
   </style>
 </head>
 <body>
-  <!-- Ganti URL di bawah dengan link Web App Google Apps Script Anda dari Langkah 4 -->
-  <iframe src="PASTE_URL_WEB_APP_GAS_ANDA_DISINI"></iframe>
+
+  <!-- Loading Animation Background -->
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <div class="loading-text">Memuat Aplikasi...</div>
+  </div>
+
+  <!-- Iframe yang memanggil link Apps Script Anda -->
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbzPvb-YG3XtHIyg9h0ZmLeSU5cUlxta_QTi_-zkYjmGkuR5z_M2Vr6XJd1Pn8qzJumm/exec" 
+    allowfullscreen="true"
+    title="Google AI Pro Order Form">
+  </iframe>
+
 </body>
 </html>
